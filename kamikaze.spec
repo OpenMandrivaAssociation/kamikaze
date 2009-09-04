@@ -1,7 +1,7 @@
 %define name	kamikaze
 %define version	0.2
 %define tag	0_2
-%define release	%mkrel 7
+%define release	%mkrel 8
 
 Name:		    %{name}
 Version:	    %{version}
