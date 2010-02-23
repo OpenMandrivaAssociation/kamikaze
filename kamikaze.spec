@@ -1,7 +1,7 @@
 %define name	kamikaze
 %define version	0.2
 %define tag	0_2
-%define release	%mkrel 8
+%define release	%mkrel 9
 
 Name:		    %{name}
 Version:	    %{version}
@@ -14,11 +14,10 @@ Source0:	    http://kamikaze-qscm.tigris.org/files/documents/2030/17053/%{name}.
 Patch0:		    %{name}-0.2.fhs.patch.bz2
 Patch1:		    %{name}-0.2.fix-db-access.patch.bz2
 Requires:	    mod_php
-# webapp macros and scriptlets
-Requires(post):		rpm-helper >= 0.16
-Requires(postun):	rpm-helper >= 0.16
-BuildRequires:	rpm-helper >= 0.16
-BuildRequires:	rpm-mandriva-setup >= 1.23
+%if %mdkversion < 201010
+Requires(post):   rpm-helper
+Requires(postun):   rpm-helper
+%endif
 BuildArch:	    noarch
 BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
@@ -68,6 +67,7 @@ cat > %{buildroot}%{_webappconfdir}/%{name}.conf <<EOF
 Alias /%{name} %{_var}/www/%{name}
 
 <Directory %{_var}/www/%{name}>
+    Order allow,deny
     Allow from all
 </Directory>
 EOF
@@ -84,17 +84,22 @@ The setup used here differs from default one, to achieve better FHS compliance.
 
 post-installation
 -----------------
-You have to create the MySQL database, and import all files from /usr/share/kamikaze/db
+You have to create the MySQL database, and import all files from
+/usr/share/kamikaze/db
 EOF
 
 %clean
 rm -rf %{buildroot}
 
 %post
+%if %mdkversion < 201010
 %_post_webapp
+%endif
 
 %postun
+%if %mdkversion < 201010
 %_postun_webapp
+%endif
 
 %files
 %defattr(-,root,root)
