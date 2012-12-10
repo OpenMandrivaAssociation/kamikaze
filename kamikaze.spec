@@ -109,3 +109,50 @@ rm -rf %{buildroot}
 %{_var}/www/%{name}
 %{_datadir}/%{name}
 
+
+
+%changelog
+* Mon Dec 06 2010 Oden Eriksson <oeriksson@mandriva.com> 0.2-10mdv2011.0
++ Revision: 612522
+- the mass rebuild of 2010.1 packages
+
+* Tue Feb 23 2010 Guillaume Rousse <guillomovitch@mandriva.org> 0.2-9mdv2010.1
++ Revision: 510415
+- rely on filetrigger for reloading apache configuration begining with 2010.1, rpm-helper macros otherwise
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 0.2-8mdv2010.0
++ Revision: 429657
+- rebuild
+
+* Fri Jul 25 2008 Thierry Vignaud <tv@mandriva.org> 0.2-7mdv2009.0
++ Revision: 247494
+- rebuild
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Tue Dec 18 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.2-5mdv2008.1
++ Revision: 132456
+- rebuild
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+    - import kamikaze
+
+
+* Tue Aug 29 2006 Guillaume Rousse <guillomovitch@mandriva.org> 0.2-4mdv2007.0
+- use webapps macros
+- use herein document for README.mdv
+
+* Sun Mar 19 2006 Guillaume Rousse <guillomovitch@mandriva.org> 0.2-3mdk
+- fix license
+
+* Sat Mar 18 2006 Guillaume Rousse <guillomovitch@mandriva.org> 0.2-2mdk
+- better FHS compliance
+- backport compatible apache configuration file
+- fix db access
+- README.mdk
+- drop useless DB file
+
+* Mon Mar 13 2006 Guillaume Rousse <guillomovitch@mandriva.org> 0.2-1mdk
+- first mdk release 

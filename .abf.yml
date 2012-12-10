@@ -1,2 +1,4 @@
 sources:
-  "kamikaze.v0_2.tar.bz2:"	c01d7b2d4d7e00f0ffc82522b6f4f72592af37e0
+  "kamikaze-0.2.fhs.patch.bz2": ad9a4cba5b45a302cd73e0b5fc3ec9910fadf4fe
+  "kamikaze-0.2.fix-db-access.patch.bz2": 0af2207d5a3c01561037b3fc41e47c005c7382cc
+  "kamikaze.v0_2.tar.bz2": c01d7b2d4d7e00f0ffc82522b6f4f72592af37e0
