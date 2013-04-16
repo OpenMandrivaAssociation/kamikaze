@@ -1,11 +1,8 @@
-%define name	kamikaze
-%define version	0.2
 %define tag	0_2
-%define release:	12
 
-Name:		    %{name}
-Version:	    %{version}
-Release:	    %{release}
+Name:		    kamikaze
+Version:	    0.2
+Release:	    12
 Summary:	    An SCM query tool similar to Mozilla's tool, Bonsai
 License:	    Apache License
 Group:		    Networking/WWW
@@ -14,12 +11,7 @@ Source0:	    http://kamikaze-qscm.tigris.org/files/documents/2030/17053/%{name}.
 Patch0:		    %{name}-0.2.fhs.patch.bz2
 Patch1:		    %{name}-0.2.fix-db-access.patch.bz2
 Requires:	    mod_php
-%if %mdkversion < 201010
-Requires(post):   rpm-helper
-Requires(postun):   rpm-helper
-%endif
 BuildArch:	    noarch
-BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
 Kamikaze-qscm is a tool that allows developers and CM related personnel to
