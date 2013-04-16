@@ -1,7 +1,7 @@
 %define name	kamikaze
 %define version	0.2
 %define tag	0_2
-%define release	%mkrel 10
+%define release:	11
 
 Name:		    %{name}
 Version:	    %{version}
@@ -91,15 +91,7 @@ EOF
 %clean
 rm -rf %{buildroot}
 
-%post
-%if %mdkversion < 201010
-%_post_webapp
-%endif
 
-%postun
-%if %mdkversion < 201010
-%_postun_webapp
-%endif
 
 %files
 %defattr(-,root,root)
