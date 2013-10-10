@@ -11,6 +11,7 @@ Source0:	    http://kamikaze-qscm.tigris.org/files/documents/2030/17053/%{name}.
 Patch0:		    %{name}-0.2.fhs.patch.bz2
 Patch1:		    %{name}-0.2.fix-db-access.patch.bz2
 Requires:	    mod_php
+Requires:		apache-mod_socache_shmcb
 BuildArch:	    noarch
 
 %description
@@ -59,8 +60,7 @@ cat > %{buildroot}%{_webappconfdir}/%{name}.conf <<EOF
 Alias /%{name} %{_var}/www/%{name}
 
 <Directory %{_var}/www/%{name}>
-    Order allow,deny
-    Allow from all
+    Require all granted
 </Directory>
 EOF
 
