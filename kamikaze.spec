@@ -2,7 +2,7 @@
 
 Name:		    kamikaze
 Version:	    0.2
-Release:	    12
+Release:	    13
 Summary:	    An SCM query tool similar to Mozilla's tool, Bonsai
 License:	    Apache License
 Group:		    Networking/WWW
@@ -36,8 +36,6 @@ other tools.)
 %build
 
 %install
-rm -rf %{buildroot}
-
 install -d -m 755 %{buildroot}%{_var}/www/%{name}
 install -m 644 html/index.php %{buildroot}%{_var}/www/%{name}
 
@@ -81,12 +79,9 @@ You have to create the MySQL database, and import all files from
 EOF
 
 %clean
-rm -rf %{buildroot}
-
 
 
 %files
-%defattr(-,root,root)
 %doc *.txt README.mdv
 %config(noreplace) %{_webappconfdir}/%{name}.conf
 %config(noreplace) %{_sysconfdir}/%{name}
