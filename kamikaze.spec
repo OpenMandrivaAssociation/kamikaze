@@ -2,7 +2,7 @@
 
 Name:		    kamikaze
 Version:	    0.2
-Release:	    13
+Release:	    14
 Summary:	    An SCM query tool similar to Mozilla's tool, Bonsai
 License:	    Apache License
 Group:		    Networking/WWW
