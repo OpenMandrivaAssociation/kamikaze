@@ -6,7 +6,7 @@ Release:	    14
 Summary:	    An SCM query tool similar to Mozilla's tool, Bonsai
 License:	    Apache License
 Group:		    Networking/WWW
-URL:		    http://kamikaze-qscm.tigris.org/
+URL:		    https://kamikaze-qscm.tigris.org/
 Source0:	    http://kamikaze-qscm.tigris.org/files/documents/2030/17053/%{name}.v%{tag}.tar.bz2
 Patch0:		    %{name}-0.2.fhs.patch.bz2
 Patch1:		    %{name}-0.2.fix-db-access.patch.bz2
